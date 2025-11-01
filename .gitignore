@@ -1,0 +1,9 @@
+# File nhạy cảm - KHÔNG BAO GIỜ up lên GitHub
+.env
+
+# Các file do Foundry tạo ra
+out/
+cache/
+
+# Các thư mục node.js (nếu sau này bạn dùng)
+node_modules/
