@@ -2,21 +2,20 @@
 
 🌍 **Celo Donation App**
 
-> Một ứng dụng quyên góp minh bạch trên nền tảng blockchain **Celo**, giúp mọi người dễ dàng đóng góp và theo dõi dòng tiền công khai.
+Một ứng dụng quyên góp minh bạch trên nền tảng blockchain **Celo**, giúp mọi người dễ dàng đóng góp và theo dõi dòng tiền công khai.
 
 ---
 
 ## 👥 **Thành viên nhóm**
-| Họ và tên 
-|------------
-| **Lê Hùng Duy** 
-| **Trần Minh Đức Anh** 
+
+**Lê Hùng Duy** 
+**Trần Minh Đức Anh** 
 
 ---
 
 ## 💡 **Tổng quan dự án**
 
-**Celo Donation App** là một ứng dụng **Web3 phi tập trung (dApp)** được xây dựng trên mạng **Celo Blockchain**.  
+**Celo Donation App** là một ứng dụng **Web3 phi tập trung ** được xây dựng trên mạng **Celo Blockchain**.  
 Dự án cho phép người dùng:
 - Kết nối ví Celo để **thực hiện quyên góp bằng token CELO**  
 - **Xem tổng số tiền quyên góp** được ghi nhận **trực tiếp trên blockchain**  
