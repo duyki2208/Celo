@@ -4,7 +4,7 @@ import { ethers } from "ethers";
 import detectEthereumProvider from "@metamask/detect-provider";
 import donationABI from "./DonationABI.json";
 
-const contractAddress = "0xa454A09b7F1d061e89e73929130345349601DAc8"; // contract bạn đã deploy
+const contractAddress = "0xafc3ba217721283f658ed77424eae592f470c376"; // contract bạn đã deploy
 const provider = new ethers.JsonRpcProvider("https://forno.celo.org");
 
 function App() {
@@ -19,7 +19,9 @@ function App() {
   async function connectWallet() {
     const provider = await detectEthereumProvider();
     if (provider) {
-      const accounts = await provider.request({ method: "eth_requestAccounts" });
+      const accounts = await provider.request({
+        method: "eth_requestAccounts",
+      });
       setAccount(accounts[0]);
     } else {
       alert("Vui lòng cài MetaMask hoặc Celo Wallet Extension!");
@@ -52,11 +54,17 @@ function App() {
             },
           ],
         });
-        return alert("⚠️ Vui lòng chuyển sang mạng Celo trong MetaMask rồi thử lại!");
+        return alert(
+          "⚠️ Vui lòng chuyển sang mạng Celo trong MetaMask rồi thử lại!"
+        );
       }
 
       const signer = await provider.getSigner();
-      const contract = new ethers.Contract(contractAddress, donationABI.abi, signer);
+      const contract = new ethers.Contract(
+        contractAddress,
+        donationABI.abi,
+        signer
+      );
 
       const tx = await contract.donate({
         value: ethers.parseEther(amount), // ví dụ "0.01"
@@ -71,11 +79,16 @@ function App() {
     }
   }
 
-
   async function loadTotalDonations() {
     try {
-      const provider = new ethers.JsonRpcProvider("https://forno.celo-sepolia.celo-testnet.org/");
-      const contract = new ethers.Contract(contractAddress, donationABI.abi, provider);
+      const provider = new ethers.JsonRpcProvider(
+        "https://forno.celo-sepolia.celo-testnet.org/"
+      );
+      const contract = new ethers.Contract(
+        contractAddress,
+        donationABI.abi,
+        provider
+      );
       const total = await contract.getDonations();
       setTotalDonations(ethers.formatEther(total));
     } catch (err) {
@@ -89,7 +102,9 @@ function App() {
         <h1>🎁 Celo Donation DApp</h1>
 
         {account ? (
-          <p className="account">💳 Ví đang kết nối: <b>{account}</b></p>
+          <p className="account">
+            💳 Ví đang kết nối: <b>{account}</b>
+          </p>
         ) : (
           <button className="btn connect" onClick={connectWallet}>
             Kết nối ví
@@ -108,7 +123,9 @@ function App() {
           </button>
         </div>
 
-        <h2>Tổng số CELO donate: <span>{totalDonations}</span> 💰</h2>
+        <h2>
+          Tổng số CELO donate: <span>{totalDonations}</span> 💰
+        </h2>
       </div>
     </div>
   );
