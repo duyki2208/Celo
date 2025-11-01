@@ -9,17 +9,13 @@
 
 ---
 
-## 💡 Chi tiết dự án
+## Giới thiệu dự án
 
-**CeloDonation** là một ứng dụng Web đơn giản cho phép người dùng:
+# Celo Donation App là một ứng dụng web phi tập trung (dApp) giúp người dùng dễ dàng quyên góp bằng token CELO thông qua ví blockchain. Toàn bộ giao dịch và tổng số tiền quyên góp được lưu trữ minh bạch trên mạng lưới Celo.
 
-- Kết nối ví Celo (qua MetaMask hoặc Celo Extension)
-- Thực hiện quyên góp bằng token **CELO**
-- Xem tổng số tiền quyên góp được lưu trữ trực tiếp trên blockchain
-
-Ứng dụng được xây dựng bằng:
-
-- **React.js** (Frontend)
-- **Ethers.js** (tương tác với smart contract)
-- **Smart Contract Solidity** (deploy trên mạng **Celo**)
+## Chức năng chính
+- ***Kết nối ví Celo (hỗ trợ MetaMask và Celo Extension Wallet)***
+- ***Thực hiện quyên góp bằng token CELO***
+- ***Xem tổng số tiền quyên góp trực tiếp trên blockchain***
+- ***Tương tác thông minh giữa Frontend và Smart Contract qua Ethers.js***
 
